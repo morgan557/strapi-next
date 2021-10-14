@@ -4,8 +4,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
 
+
 const Home = ({ articles, categories, homepage }) => {
+  let a = console.log(articles[0].comment);
   return (
+    a,
     <Layout categories={categories}>
       <Seo seo={homepage.seo} />
       <div className="uk-section">
@@ -13,6 +16,8 @@ const Home = ({ articles, categories, homepage }) => {
           <h1>{homepage.hero.title}</h1>
           <Articles articles={articles} />
         </div>
+      </div>
+      <div>
       </div>
     </Layout>
   )

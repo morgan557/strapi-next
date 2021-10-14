@@ -1,5 +1,5 @@
 "use strict";
-
+const io = require ('socket.io')
 const fs = require("fs");
 const path = require("path");
 const mime = require("mime-types");
@@ -209,4 +209,21 @@ module.exports = async () => {
       console.error(error);
     }
   }
+  // process.nextTick(() =>{
+  //   var io = require('socket.io')(strapi.server);
+  //   io.on('connection', async function(socket) {
+
+  //     console.log(`a user connected`)
+  //     // send message on user connection
+  //     socket.emit('hello', JSON.stringify({message: await strapi.services.profile.update({"posted_by"})}));
+
+
+  //     // listen for user diconnect
+  //     socket.on('disconnect', () =>{
+  //       console.log('a user disconnected')
+  //     });
+  //   });
+  //   strapi.io = io; // register socket io inside strapi main object to use it globally anywhere
+  // })
+  
 };

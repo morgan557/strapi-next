@@ -48,6 +48,14 @@
     "author": {
       "via": "articles",
       "model": "writer"
+    },
+    "comments": {
+      "via": "article",
+      "collection": "comments"
+    },
+    "map": {
+      "via": "article",
+      "model": "map"
     }
   }
 }

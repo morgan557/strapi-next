@@ -18,11 +18,16 @@ const Nav = ({ categories }) => {
           <ul className="uk-navbar-nav">
             {categories.map((category) => {
               return (
+                <div class="uk-animation-toggle" tabindex="0">
+                <div class="uk-card uk-card-default uk-card-body uk-animation-shake">
                 <li key={category.id}>
-                  <Link as={`/category/${category.slug}`} href="/category/[id]">
+                   <Link as={`/category/${category.slug}`} href="/category/[id]">
                     <a className="uk-link-reset">{category.name}</a>
-                  </Link>
-                </li>
+                   </Link>
+                  </li>
+              
+                </div>
+            </div>
               )
             })}
           </ul>
